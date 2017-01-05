@@ -41,9 +41,9 @@ int main()
 
     }
 
-    float divide (num1,num2)
+    float divide (num1, num2)
     {
-        return (num1/num2);
+        return (num1/(float)num2);
     }
 
     switch (choice)
@@ -51,7 +51,7 @@ int main()
         case 1: printf ("Results: %d\n", add(num1, num2)); break;
         case 2: printf("Results: %d\n", subtract (num1, num2)); break;
         case 3: printf("Results: %d\n", multiply (num1, num2)); break;
-        case 4: printf("Results: %f\n", divide (num1, num2)); break;
+        case 4: printf("Results: %.2f\n", divide (num1, num2)); break;
         default: printf("invalid");
     }
 
@@ -59,6 +59,7 @@ int main()
  printf("\nPress y then hit enter to continue:");
  scanf("%s", &confirm);
 printf("\n");
+system ("cls");
  }
 while (confirm == 'y');
 
